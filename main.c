@@ -4,55 +4,6 @@
 
 #define size 100 // definição de tamanho 100 caracteres das strings
 
-// função principal
-int main() {
-    IndustriaCliente clientes[size];
-    int numeroClientes = 0;
-    int cadastroResiduos = 0;
-    int opcao;
-
-    if (!realizarLogin()) {
-        printf("Login inválido, o programa será encerrado.\n");
-        return 0;
-    }
-
-    do {
-        printf("\nMenu:\n");
-        printf("1. Cadastrar a indústria\n");
-        printf("2. Cadastrar resíduos e valor");
-        printf("3. Atualizar os resíduos e valor\n");
-        printf("4. Gerar relatório individual\n");
-        printf("5. Sair\n");
-        printf("Opção: ");
-        scanf("%d", &opcao);
-
-        switch (opcao) {
-            case 1:
-                cadastrarIndustria(&clientes[numeroClientes]);
-                numeroClientes++;
-                break;
-            case 2:
-                cadastrarResiduos(&clientes[cadastroResiduos]);
-                cadastroResiduos++;
-                break;
-            case 3:
-                atualizarDados(&clientes[numeroClientes - 1]);
-                break;
-            case 4:
-                gerarRelatorioIndividual(clientes[numeroClientes - 1]);
-                break;
-            case 5:
-                printf("Encerrando o programa.\n");
-                break;
-            default:
-                printf("Opção inválida.\n");
-                break;
-        }
-    } while (opcao != 5);
-
-    return 0;
-}
-
 // armazenar as informações do cadastro da indústria
 typedef struct {
     char nomeResponsavel[size];
@@ -249,4 +200,53 @@ void gerarRelatorioIndividual(IndustriaCliente cliente) {
     printf("Nome da Empresa: %s\n", cliente.nomeEmpresa);
     printf("Quantidade de resíduos tratados: %s\n", cliente.quantidadeResiduos);
     printf("Valor estimado de custo: %s\n", cliente.valorCusto);
+}
+
+// função principal
+int main() {
+    IndustriaCliente clientes[size];
+    int numeroClientes = 0;
+    int cadastroResiduos = 0;
+    int opcao;
+
+    if (!realizarLogin()) {
+        printf("Login inválido, o programa será encerrado.\n");
+        return 0;
+    }
+
+    do {
+        printf("\nMenu:\n");
+        printf("1. Cadastrar a indústria\n");
+        printf("2. Cadastrar resíduos e valor");
+        printf("3. Atualizar os resíduos e valor\n");
+        printf("4. Gerar relatório individual\n");
+        printf("5. Sair\n");
+        printf("Opção: ");
+        scanf("%d", &opcao);
+
+        switch (opcao) {
+            case 1:
+                cadastrarIndustria(&clientes[numeroClientes]);
+                numeroClientes++;
+                break;
+            case 2:
+                cadastrarResiduos(&clientes[cadastroResiduos]);
+                cadastroResiduos++;
+                break;
+            case 3:
+                atualizarDados(&clientes[numeroClientes - 1]);
+                break;
+            case 4:
+                gerarRelatorioIndividual(clientes[numeroClientes - 1]);
+                break;
+            case 5:
+                printf("Encerrando o programa.\n");
+                break;
+            default:
+                printf("Opção inválida.\n");
+                break;
+        }
+    } while (opcao != 5);
+
+    return 0;
 }
