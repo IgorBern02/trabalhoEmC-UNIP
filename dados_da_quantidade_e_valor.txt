@@ -1,0 +1,4 @@
+Quantidade de resíduos ambientais tratados: 20
+valor estimado de custo: 100,00
+Quantidade de resíduos ambientais tratados: 300
+valor estimado de custo: 1000,00

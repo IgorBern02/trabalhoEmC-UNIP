@@ -1,0 +1,32 @@
+Nome do Responsável: igor
+CPF do Responsável: 56418888936
+Data de Nascimento do Responsável: 28/04/05
+Nome da Empresa: start-up do igor
+CNPJ: 12.345.678/0001-90
+Razão Social: IGOR Ind£stria.
+Nome Fantasia: ABC do igor
+Telefone: 11998763253
+Rua: Rua das Flores
+Numero: 222
+Bairro: Jardim das Ac cias
+Cidade: SÆo Paulo
+Estado: SÆo Paulo
+Cep: 12345-678
+E-mail: emaildaempresa123@gmail.com
+Data de Abertura: 04/12/99
+Nome do Responsável: a
+CPF do Responsável: b
+Data de Nascimento do Responsável: a
+Nome da Empresa: a
+CNPJ: b
+Razão Social: a
+Nome Fantasia: a
+Telefone: a
+Rua: a
+Numero: a
+Bairro: a
+Cidade: aa
+Estado: a
+Cep: a
+E-mail: a
+Data de Abertura: a
