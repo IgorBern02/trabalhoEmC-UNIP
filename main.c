@@ -135,6 +135,7 @@ void cadastrarIndustria(IndustriaCliente *cliente) {
     fclose(arquivo);
 }
 
+
 // cadastrar os resíduos e valores
 void cadastrarResiduos(IndustriaCliente *cliente) {
     int quantidadeResiduos;
@@ -161,6 +162,7 @@ void cadastrarResiduos(IndustriaCliente *cliente) {
 
     fclose(arquivo);
 }
+
 
 // atualizar as quantidades de resíduos e valores
 void atualizarDados(IndustriaCliente *cliente) {
@@ -224,10 +226,11 @@ int main() {
         printf("1. Cadastrar a indústria\n");
         printf("2. Cadastrar resíduos e valor");
         printf("3. Atualizar os resíduos e valor\n");
-        printf("4. Gerar relatório individual\n");
-        printf("5. Sair\n");
+        printf("2. Gerar relatório individual\n");
+        printf("3. Sair\n");
         printf("Opção: ");
-        scanf("%d", &opcao);
+        scanf("%d", &opcao); 
+    
 
         switch (opcao) {
             case 1:
