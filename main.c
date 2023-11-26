@@ -1,10 +1,10 @@
 #include <stdio.h> //entradas e saidas
 #include <string.h> // manipular string usando o strcmp
-#include <locale.h> // melhorar a acentuação no terminal
+#include <locale.h> // melhorar a acentuaï¿½ï¿½o no terminal
 
-#define size 100 // definição de tamanho 100 caracteres das strings
+#define size 100 // definiï¿½ï¿½o de tamanho 100 caracteres das strings
 
-// armazenar as informações do cadastro da indústria
+// armazenar as informaï¿½ï¿½es do cadastro da indï¿½stria
 typedef struct {
     char nomeResponsavel[size];
     char cpfResponsavel[size];
@@ -34,19 +34,19 @@ int realizarLogin() {
     printf("BEM VINDO!\n");
 
     printf("Login:\n");
-    printf("Usuário: ");
+    printf("Usuï¿½rio: ");
     scanf("%s", nomeUser);
     printf("Senha: ");
     scanf("%s", senha);
 
-// verificação usuário e senha
+// verificaï¿½ï¿½o usuï¿½rio e senha
 
 if (strcmp(nomeUser, "unip") == 0 && strcmp(senha, "unip123") == 0)
 {
     printf("Login realizado com sucesso!\n");
     return 1;
 } else {
-    printf("Tentativa de Login negada, usúario ou senha incorretos.\n");
+    printf("Tentativa de Login negada, usï¿½ario ou senha incorretos.\n");
     return 0;
 }
 }
@@ -64,20 +64,20 @@ void criptografar(char *str) {
     }
 }
 
-// cadastrar os informações da indústria
+// cadastrar os informaï¿½ï¿½es da indï¿½stria
 void cadastrarIndustria(IndustriaCliente *cliente) {
-    printf("\nCadastro da indústria:\n");
-    printf("Nome do Responsável: ");
+    printf("\nCadastro da indï¿½stria:\n");
+    printf("Nome do Responsï¿½vel: ");
     scanf(" %[^\n]s", cliente->nomeResponsavel);
-    printf("CPF do Responsável: ");
+    printf("CPF do Responsï¿½vel: ");
     scanf(" %[^\n]s", cliente->cpfResponsavel);
-    printf("Data de Nascimento do Responsável: ");
+    printf("Data de Nascimento do Responsï¿½vel: ");
     scanf(" %[^\n]s", cliente->nascimentoResponsavel);
     printf("Nome da Empresa: ");
     scanf(" %[^\n]s", cliente->nomeEmpresa);
     printf("CNPJ: ");
     scanf(" %[^\n]s", cliente->cnpj);
-    printf("Razão Social: ");
+    printf("Razï¿½o Social: ");
     scanf(" %[^\n]s", cliente->razaoSocial);
     printf("Nome Fantasia: ");
     scanf(" %[^\n]s", cliente->nomeFantasia);
@@ -85,7 +85,7 @@ void cadastrarIndustria(IndustriaCliente *cliente) {
     scanf(" %[^\n]s", cliente->telefone);
     printf("Rua: ");
     scanf(" %[^\n]s", cliente->rua);
-    printf("Número: ");
+    printf("Nï¿½mero: ");
     scanf(" %[^\n]s", cliente->numero);
     printf("Bairro: ");
     scanf(" %[^\n]s", cliente->bairro);
@@ -115,12 +115,12 @@ void cadastrarIndustria(IndustriaCliente *cliente) {
     }
 
     // dados no arquivo
-    fprintf(arquivo, "Nome do Responsável: %s\n", cliente->nomeResponsavel);
-    fprintf(arquivo, "CPF do Responsável: %s\n", cliente->cpfResponsavel);
-    fprintf(arquivo, "Data de Nascimento do Responsável: %s\n", cliente->nascimentoResponsavel);
+    fprintf(arquivo, "Nome do Responsï¿½vel: %s\n", cliente->nomeResponsavel);
+    fprintf(arquivo, "CPF do Responsï¿½vel: %s\n", cliente->cpfResponsavel);
+    fprintf(arquivo, "Data de Nascimento do Responsï¿½vel: %s\n", cliente->nascimentoResponsavel);
     fprintf(arquivo, "Nome da Empresa: %s\n", cliente->nomeEmpresa);
     fprintf(arquivo, "CNPJ: %s\n", cliente->cnpj);
-    fprintf(arquivo, "Razão Social: %s\n", cliente->razaoSocial);
+    fprintf(arquivo, "Razï¿½o Social: %s\n", cliente->razaoSocial);
     fprintf(arquivo, "Nome Fantasia: %s\n", cliente->nomeFantasia);
     fprintf(arquivo, "Telefone: %s\n", cliente->telefone);
     fprintf(arquivo, "Rua: %s\n", cliente->rua);
@@ -136,13 +136,13 @@ void cadastrarIndustria(IndustriaCliente *cliente) {
 }
 
 
-// cadastrar os resíduos e valores
+// cadastrar os resï¿½duos e valores
 void cadastrarResiduos(IndustriaCliente *cliente) {
     int quantidadeResiduos;
     float valorCusto;
 
-    printf("\nCadastrar os resíduos:\n");
-    printf("Digite a quantidade de resíduos tratados: ");
+    printf("\nCadastrar os resï¿½duos:\n");
+    printf("Digite a quantidade de resï¿½duos tratados: ");
     scanf("%d", &quantidadeResiduos);
     printf("Digite o valor estimado de custo: ");
     scanf("%f", &valorCusto);
@@ -157,21 +157,21 @@ void cadastrarResiduos(IndustriaCliente *cliente) {
     }
 
     // dados atualizados no arquivo
-    fprintf(arquivo, "Quantidade de resíduos ambientais tratados: %d\n", quantidadeResiduos);
+    fprintf(arquivo, "Quantidade de resï¿½duos ambientais tratados: %d\n", quantidadeResiduos);
     fprintf(arquivo, "valor estimado de custo: %.2f\n", valorCusto);
 
     fclose(arquivo);
 }
 
 
-// atualizar as quantidades de resíduos e valores
+// atualizar as quantidades de resï¿½duos e valores
 void atualizarDados(IndustriaCliente *cliente) {
     int quantidadeResiduos;
     float valorCusto;
     // IndustriaCliente industria;
 
     printf("\nAtualizar os dados:\n");
-    printf("Digite a quantidade de resíduos tratados: ");
+    printf("Digite a quantidade de resï¿½duos tratados: ");
     scanf("%d", &quantidadeResiduos);
     printf("Digite o valor estimado de custo: ");
     scanf("%f", &valorCusto);
@@ -190,23 +190,41 @@ void atualizarDados(IndustriaCliente *cliente) {
     }
 
     // dados atualizados no arquivo
-    fprintf(arquivo, "Quantidade de resíduos ambientais tratados: %d\n", quantidadeResiduos);
+    fprintf(arquivo, "Quantidade de resï¿½duos ambientais tratados: %d\n", quantidadeResiduos);
     fprintf(arquivo, "valor estimado de custo: %.2f\n", valorCusto);
 
     fclose(arquivo);
 }
 
-// gerar relatórios individuais
+// gerar relatï¿½rios individuais
 void gerarRelatorioIndividual(IndustriaCliente cliente) {
 
-    printf("\nRelatório Individual:\n");
-    printf("Nome da Respónsavel: %s\n", cliente.nomeResponsavel);
+    printf("\nRelatï¿½rio Individual:\n");
+    printf("Nome da Respï¿½nsavel: %s\n", cliente.nomeResponsavel);
     printf("Nome da Empresa: %s\n", cliente.nomeEmpresa);
-    printf("Quantidade de resíduos tratados: %s\n", cliente.quantidadeResiduos);
+    printf("Quantidade de resï¿½duos tratados: %s\n", cliente.quantidadeResiduos);
     printf("Valor estimado de custo: %s\n", cliente.valorCusto);
+
+    // salvar os dados do relatÃ³rio em um arquivo
+    FILE *arquivoRelatorio;
+    arquivoRelatorio = fopen("relatorio_individual.txt", "w");
+
+    if (arquivoRelatorio == NULL) {
+        printf("Erro ao criar o arquivo de relatÃ³rio.\n");
+        return;
+    }
+
+    // escrever os dados no arquivo
+    fprintf(arquivoRelatorio, "Relatï¿½rio Individual:\n");
+    fprintf(arquivoRelatorio, "Nome do Respï¿½nsavel: %s\n", cliente.nomeResponsavel);
+    fprintf(arquivoRelatorio, "Nome da Empresa: %s\n", cliente.nomeEmpresa);
+    fprintf(arquivoRelatorio, "Quantidade de resï¿½duos tratados: %d\n", cliente.quantidadeResiduos);
+    fprintf(arquivoRelatorio, "Valor estimado de custo: %.2f\n", cliente.valorCusto);
+
+    fclose(arquivoRelatorio);
 }
 
-// função principal
+// funï¿½ï¿½o principal
 int main() {
 
     setlocale(LC_ALL,"Portuguese_Brazil");
@@ -217,20 +235,20 @@ int main() {
     int opcao;
 
     if (!realizarLogin()) {
-        printf("Login inválido, o programa será encerrado.\n");
+        printf("Login invï¿½lido, o programa serï¿½ encerrado.\n");
         return 0;
     }
 
     do {
         printf("\nMenu:\n");
-        printf("1. Cadastrar a indústria\n");
-        printf("2. Cadastrar resíduos e valor");
-        printf("3. Atualizar os resíduos e valor\n");
-        printf("2. Gerar relatório individual\n");
+        printf("1. Cadastrar a indï¿½stria\n");
+        printf("2. Cadastrar resï¿½duos e valor");
+        printf("3. Atualizar os resï¿½duos e valor\n");
+        printf("2. Gerar relatï¿½rio individual\n");
         printf("3. Sair\n");
-        printf("Opção: ");
-        scanf("%d", &opcao); 
-    
+        printf("Opï¿½ï¿½o: ");
+        scanf("%d", &opcao);
+
 
         switch (opcao) {
             case 1:
@@ -251,7 +269,7 @@ int main() {
                 printf("Encerrando o programa.\n");
                 break;
             default:
-                printf("Opção inválida.\n");
+                printf("Opï¿½ï¿½o invï¿½lida.\n");
                 break;
         }
     } while (opcao != 5);

@@ -190,3 +190,9 @@ Quantidade de resíduos ambientais tratados: 1994257696
 valor estimado de custo: 2244384053284355200000000000000000,00
 Quantidade de resíduos ambientais tratados: 1994257696
 valor estimado de custo: 2244384053284355200000000000000000,00
+Quantidade de resíduos ambientais tratados: 11
+valor estimado de custo: 11,00
+Quantidade de resíduos ambientais tratados: 11
+valor estimado de custo: 11,00
+Quantidade de resï¿½duos ambientais tratados: 11
+valor estimado de custo: 11,00
